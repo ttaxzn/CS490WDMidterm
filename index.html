@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Midterm</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form
+      name="myForm"
+      onsubmit="return !!(validateUser() & validateEmail() & validateDropdown() & validateRadio());"
+    >
+      <div class="firstQ">
+        <label> Username: </label
+        ><input type="text" name="username" id="border" class="border" />
+        <div id="message" class="message">Username should be <=6 and >=10</div>
+      </div>
+
+      <div class="secondQ">
+        <label>Email:</label
+        ><input type="text" name="email" id="border1" class="border" />
+        <div id="message1" class="message">Not a valid email address</div>
+      </div>
+
+      <div class="thirdQ">
+        <label for="position">Position:</label>
+        <select name="position" id="position">
+          <option value="">Not selected</option>
+          <option value="engineer">Engineer</option>
+          <option value="doctor">Doctor</option>
+          <option value="mechanic">Mechanic</option>
+        </select>
+        <div id="message2" class="message">You must select a position</div>
+      </div>
+
+      <div class="fourthQ">
+        <label for="type">Type:</label>
+        <div class="flexcolumn">
+            <div class="radio">
+                <input type="radio" name="part" id="parttime" value="parttime" />
+                <div>Part Time</div>
+            </div>
+            
+    <div class="radio">
+        <input type="radio" name="part" id="fulltime" value="fulltime" />
+        <div>Full Time</div>
+    </div>
+            
+
+        </div>
+
+        <div id="message3" class="message">You must select a type</div>
+      </div>
+
+      <label></label><input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
